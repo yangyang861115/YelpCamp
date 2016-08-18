@@ -25,7 +25,7 @@ app.use(flash());
 
 //PASSPORT CONFIGURATION
 app.use(expressSession({
-    secret : "my best friend",
+    secret : process.env.SECRET,
     resave : false,
     saveUninitialized: false
 }));
