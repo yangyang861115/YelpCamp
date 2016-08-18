@@ -44,8 +44,9 @@ app.use(function(req, res, next) {
 });
 
 app.use(express.static(__dirname + "/public"));
+mongoose.connect(process.env.DATABASEURL);
 //mongoose.connect("mongodb://localhost/yelpcamp");
-mongoose.connect("mongodb://yang:youth667@ds161495.mlab.com:61495/yelpcampyang");
+//mongoose.connect("mongodb://yang:youth667@ds161495.mlab.com:61495/yelpcampyang");
 //seedDB();
 
 //use routes
